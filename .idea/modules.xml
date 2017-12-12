@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springBoot-aop/springBoot-aop.iml" filepath="$PROJECT_DIR$/springBoot-aop/springBoot-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-config/springBoot-config.iml" filepath="$PROJECT_DIR$/springBoot-config/springBoot-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-configFile/springBoot-configFile.iml" filepath="$PROJECT_DIR$/springBoot-configFile/springBoot-configFile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-crossOrgin/springBoot-crossOrgin.iml" filepath="$PROJECT_DIR$/springBoot-crossOrgin/springBoot-crossOrgin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-init/springBoot-init.iml" filepath="$PROJECT_DIR$/springBoot-init/springBoot-init.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-log/springBoot-log.iml" filepath="$PROJECT_DIR$/springBoot-log/springBoot-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-mybatis/springBoot-mybatis.iml" filepath="$PROJECT_DIR$/springBoot-mybatis/springBoot-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-profile/springBoot-profile.iml" filepath="$PROJECT_DIR$/springBoot-profile/springBoot-profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-project.iml" filepath="$PROJECT_DIR$/springBoot-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-properties/springBoot-properties.iml" filepath="$PROJECT_DIR$/springBoot-properties/springBoot-properties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-save-properties/springBoot-save-properties.iml" filepath="$PROJECT_DIR$/springBoot-save-properties/springBoot-save-properties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-xml/springBoot-xml.iml" filepath="$PROJECT_DIR$/springBoot-xml/springBoot-xml.iml" />
+    </modules>
+  </component>
+</project>
