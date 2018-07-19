@@ -35,31 +35,18 @@
         <module name="springBoot-crossOrgin" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="springboot-aop" target="1.5" />
-      <module name="springBoot-aop" target="1.5" />
       <module name="springboot-config" target="1.5" />
-      <module name="springBoot-config" target="1.5" />
       <module name="springboot-config-file" target="1.5" />
-      <module name="springBoot-configFile" target="1.5" />
       <module name="springboot-cross-orgin" target="1.8" />
-      <module name="springBoot-crossOrgin" target="1.8" />
-      <module name="springBoot-init" target="1.5" />
       <module name="springboot-init" target="1.5" />
       <module name="springboot-log" target="1.5" />
-      <module name="springBoot-log" target="1.5" />
-      <module name="springBoot-mybatis" target="1.5" />
       <module name="springboot-mybatis" target="1.5" />
       <module name="springboot-profile" target="1.5" />
-      <module name="springBoot-profile" target="1.5" />
-      <module name="springBoot-project" target="1.5" />
-      <module name="springboot-project" target="1.5" />
-      <module name="springBoot-properties" target="1.5" />
       <module name="springboot-properties" target="1.5" />
       <module name="springboot-sample" target="1.5" />
-      <module name="springBoot-save-properties" target="1.5" />
       <module name="springboot-save-properties" target="1.5" />
-      <module name="springBoot-xml" target="1.5" />
       <module name="springboot-xml" target="1.5" />
     </bytecodeTargetLevel>
   </component>

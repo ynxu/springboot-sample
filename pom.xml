@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.light4j</groupId>
     <artifactId>springboot-sample</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <url>http://blog.longjiazuo.com/</url>
+    <url>https://github.com/ynxu/springboot-sample/</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
