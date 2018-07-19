@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.light4j</groupId>
-		<artifactId>springBoot-project</artifactId>
+		<artifactId>springboot-sample</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>springBoot-xml</artifactId>
-	<name>springBoot-xml</name>
+	<artifactId>springboot-xml</artifactId>
+	<name>springboot-xml</name>
 	<url>http://blog.longjiazuo.com</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
