@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
-public class ConfigApplication {
+public class Application {
 	public static void main(String[] args) {
 		// SpringApplication.run(HelloApplication.class, args);
 		/**
@@ -20,6 +20,6 @@ public class ConfigApplication {
 		/**
 		 * 关闭Banner方法二
 		 */
-		new SpringApplicationBuilder(ConfigApplication.class).bannerMode(Banner.Mode.OFF).run(args);
+		new SpringApplicationBuilder(Application.class).bannerMode(Banner.Mode.OFF).run(args);
 	}
 }

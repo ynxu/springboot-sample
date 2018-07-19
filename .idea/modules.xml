@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/springboot-xml/springBoot-xml.iml" filepath="$PROJECT_DIR$/springboot-xml/springBoot-xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-aop/springboot-aop.iml" filepath="$PROJECT_DIR$/springboot-aop/springboot-aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-config/springboot-config.iml" filepath="$PROJECT_DIR$/springboot-config/springboot-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-config-file/springboot-config-file.iml" filepath="$PROJECT_DIR$/springboot-config-file/springboot-config-file.iml" />
@@ -14,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-properties/springboot-properties.iml" filepath="$PROJECT_DIR$/springboot-properties/springboot-properties.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-sample.iml" filepath="$PROJECT_DIR$/springboot-sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-save-properties/springboot-save-properties.iml" filepath="$PROJECT_DIR$/springboot-save-properties/springboot-save-properties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-xml/springboot-xml.iml" filepath="$PROJECT_DIR$/springboot-xml/springboot-xml.iml" />
     </modules>
   </component>
 </project>

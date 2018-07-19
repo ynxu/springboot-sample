@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.light4j</groupId>
-		<artifactId>springBoot-project</artifactId>
+		<artifactId>springboot-sample</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>springBoot-xml</artifactId>
-	<name>springBoot-xml</name>
+	<artifactId>springboot-xml</artifactId>
+	<name>springboot-xml</name>
 	<url>http://blog.longjiazuo.com</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,7 +20,7 @@
 				<!-- Import dependency management from Spring Boot -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>1.4.5.RELEASE</version>
+				<version>2.0.1.RELEASE</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

@@ -1,4 +1,4 @@
-package org.light4j.springboot.xml.scan;
+package org.light4j.springboot.xml;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
