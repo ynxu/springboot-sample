@@ -14,16 +14,7 @@
         <java.version>1.8</java.version>
     </properties>
     <modules>
-        <module>springboot-config</module>
-        <module>springboot-config-file</module>
-        <module>springboot-xml</module>
-        <module>springboot-properties</module>
-        <module>springboot-save-properties</module>
-        <module>springboot-profile</module>
-        <module>springboot-log</module>
-        <module>springboot-aop</module>
         <module>springboot-mybatis</module>
-        <module>springboot-cross-orgin</module>
-        <module>springboot-init</module>
+        <module>spring-demo</module>
     </modules>
 </project>
