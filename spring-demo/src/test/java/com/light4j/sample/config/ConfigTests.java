@@ -23,12 +23,12 @@ public class ConfigTests {
 
 
     @Test
-    public void testArticleConfig(){
+    public void testArticleConfig() {
         System.out.println(articleConfig);
     }
 
     @Test
-    public void testArticle(){
+    public void testArticle() {
         System.out.println(article);
     }
 }

@@ -11,7 +11,7 @@ public class XmlBeanTests extends BaseTests {
     OuterService outerService;
 
     @Test
-    public void xmlBeanTest(){
+    public void xmlBeanTest() {
         outerService.print();
     }
 }

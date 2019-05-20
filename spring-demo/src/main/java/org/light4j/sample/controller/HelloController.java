@@ -1,5 +1,9 @@
 package org.light4j.sample.controller;
 
+import org.light4j.sample.bean.Article;
+import org.light4j.sample.bean.Response;
+import org.light4j.sample.config.ArticleConfig;
+import org.light4j.sample.exception.RestCode;
 import org.light4j.sample.service.ConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,12 +18,13 @@ public class HelloController {
     ConfigService configService;
 
     @GetMapping(value = "/hello")
-    public String hello(){
-        return "hello";
+    public Response<String> hello() {
+        return new Response<>(RestCode.SUCCESS, "hello");
     }
+
     @GetMapping(value = "/article")
-    public String article() {
-        return configService.getArticle();
+    public Response<ArticleConfig> article() {
+        return new Response<>(RestCode.SUCCESS, configService.getArticle());
     }
 
 }

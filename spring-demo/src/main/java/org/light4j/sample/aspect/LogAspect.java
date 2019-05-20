@@ -4,8 +4,12 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.light4j.sample.annotation.LogAction;
+import org.light4j.sample.util.HttpLoggerUtils;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 
 @Aspect
@@ -33,6 +37,10 @@ public class LogAspect {
      */
     @AfterReturning(pointcut = "log()", returning = "retValue")
     public void doAfterController(JoinPoint joinPoint, Object retValue) {
+        // 获取当前请求对象 ,拦截返回值,
+        HttpServletRequest request = ((ServletRequestAttributes) (RequestContextHolder.currentRequestAttributes())).getRequest();
+        request.setAttribute(HttpLoggerUtils.LOGGER_return, retValue);
+        //
         System.out.println("ret value is :" + retValue);
     }
 }

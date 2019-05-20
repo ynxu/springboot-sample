@@ -12,8 +12,8 @@ public class ConfigService {
     ArticleConfig articleConfig;
 
     @LogAction(value = "getArticle")
-    public String getArticle() {
-        return articleConfig.toString();
+    public ArticleConfig getArticle() {
+        return articleConfig;
     }
 
 

@@ -3,8 +3,10 @@ package org.light4j.sample.bean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
+
 @Component
-public class Article {
+public class Article implements Serializable {
     @Value("${article.name}")
     private String name;
     @Value("${article.author}")

@@ -1,0 +1,45 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+logging:
+  file: ./logs/log.txt
+  level:
+    # 日志级别
+    #    root: debug
+    # 控制框架中的日志级别
+    #    sun: warn
+    org:
+      springframework:
+        web: debug
+
+#spring:
+#  servlet:
+#    multipart:
+#      max-file-size: 200000
+#      max-request-size: 100000
+
+# swagger配置信息
+swagger:
+  title: springboot-sample API
+  description: springboot-sample API document.
+  version: 1.0
+  term-of-service-url: http://localhost:8080/api/swagger-ui.html
+  base-package: org.light4j.sample
+  contact:
+    name: yan
+    url: https://gitlab.com/ynxu
+    email: suya6330@gmail.com
+
+# 自定义配置信息
+article:
+  name: spring inaction
+  author: Craig Walls
+
+# authentication.oauth.clientId
+authentication:
+  oauth:
+    client-id: sample_server
+    secret: sample_secret
+    token-validity-in-seconds: 1800
