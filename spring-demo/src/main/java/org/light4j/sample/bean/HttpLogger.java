@@ -4,7 +4,6 @@ package org.light4j.sample.bean;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 
 /**
  * 网络请求日志实体
