@@ -1,0 +1,17 @@
+
+
+server:
+  port: 8087
+
+auth-server: http://localhost:8085/sso
+
+security:
+  oauth2:
+    client:
+      client-id: client2
+      client-secret: 123456
+      user-authorization-uri: ${auth-server}/oauth/authorize
+      access-token-uri: ${auth-server}/oauth/token
+    resource:
+      jwt:
+        key-uri: ${auth-server}/oauth/token_key
