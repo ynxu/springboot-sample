@@ -1,9 +1,11 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
-**/.settings
 
+**/.settings
+**/.mvn
 **/*.iml
 
 **/target
-
 **/logs
+
+**/mvnw*
