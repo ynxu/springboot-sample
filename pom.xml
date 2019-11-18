@@ -12,6 +12,7 @@
         <module>sso-jwt-server</module>
         <module>sso-jwt-client1</module>
         <module>sso-jwt-client2</module>
+        <module>shiro-demo</module>
     </modules>
 
     <packaging>pom</packaging>

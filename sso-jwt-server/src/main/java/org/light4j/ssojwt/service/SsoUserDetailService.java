@@ -19,7 +19,6 @@ public class SsoUserDetailService implements UserDetailsService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         if( !"admin".equals(s) )
             throw new UsernameNotFoundException("用户" + s + "不存在" );
-
         return new User( s, passwordEncoder.encode("123456"), AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_NORMAL,ROLE_MEDIUM"));
 
     }

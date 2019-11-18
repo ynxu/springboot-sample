@@ -36,10 +36,3 @@ swagger:
 article:
   name: spring inaction
   author: Craig Walls
-
-# authentication.oauth.clientId
-authentication:
-  oauth:
-    client-id: sample_server
-    secret: sample_secret
-    token-validity-in-seconds: 1800

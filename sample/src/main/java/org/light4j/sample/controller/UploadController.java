@@ -43,9 +43,9 @@ public class UploadController {
             targetPath = saveFile(uploadDir, file);
         } catch (IOException e) {
             e.printStackTrace();
-            return new Response<>(RestCode.UPLOAD_FILE_FAILD, targetPath);
+            return new Response(RestCode.UPLOAD_FILE_FAILD, targetPath);
         }
-        return new Response<>(RestCode.SUCCESS, targetPath);
+        return new Response(RestCode.SUCCESS, targetPath);
     }
 
     @LogAction
@@ -57,7 +57,7 @@ public class UploadController {
     public Response<List<String>> uploadFiles(HttpServletRequest request,
                                               @RequestParam("files") MultipartFile[] files,
                                               @RequestParam("param") String param) {
-        List<String> targetPaths = new ArrayList<>();
+        List<String> targetPaths = new ArrayList();
         try {
             // 上传目录地址
             String uploadDir = request.getSession().getServletContext().getRealPath("/") + "upload/";
@@ -68,9 +68,9 @@ public class UploadController {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            return new Response<>(RestCode.UPLOAD_FILE_FAILD, targetPaths);
+            return new Response(RestCode.UPLOAD_FILE_FAILD, targetPaths);
         }
-        return new Response<>(RestCode.SUCCESS, targetPaths);
+        return new Response(RestCode.SUCCESS, targetPaths);
     }
 
 

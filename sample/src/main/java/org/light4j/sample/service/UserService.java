@@ -14,9 +14,10 @@ public class UserService {
     @Autowired
     UserMapper userMapper;
 
-//    @Cacheable
-//    public User getUserById(long id) {
-//        User user = userMapper.getUserById(id);
-//        return user;
-//    }
+
+    @Cacheable
+    public User getUserById(long id) {
+        User user = userMapper.getUserById(id);
+        return user;
+    }
 }

@@ -7,7 +7,6 @@ import org.light4j.sample.annotation.LogAction;
 import org.light4j.sample.bean.Response;
 import org.light4j.sample.bean.User;
 import org.light4j.sample.exception.RestCode;
-import org.light4j.sample.service.AuthorityUserService;
 import org.light4j.sample.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -39,9 +38,6 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @Autowired
-    @Qualifier("userDetailService")
-    AuthorityUserService authorityUserService;
 
 
     @LogAction
@@ -51,21 +47,8 @@ public class UserController {
     public Response<User> getUserById(
             @PathVariable(value = "id") @Min(value = 1, message = "id最小值不能 < 1") @Max(value = Long.MAX_VALUE, message = "id最大值超过" + Long.MAX_VALUE) Long id
     ) {
-//        User user = userService.getUserById(id);
-//        return new Response<>(RestCode.SUCCESS, user);
-        return null;
-    }
-
-
-    @LogAction
-    @ApiOperation(value = "获取用户信息", notes = "根据 username 获取用户信息")
-    @ApiImplicitParam(name = "username", value = "username", required = true, dataTypeClass = String.class, paramType = "path")
-    @GetMapping(value = "/{username}", produces = {"application/json;charset=UTF-8"})
-    public Response<User> getUserByUsername(
-            @PathVariable(value = "username") String username
-    ) {
-        User user = (User) authorityUserService.loadUserByUsername(username);
-        return new Response<>(RestCode.SUCCESS, user);
+        User user = userService.getUserById(id);
+        return new Response(RestCode.SUCCESS, user);
     }
 
 

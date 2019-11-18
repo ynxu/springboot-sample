@@ -1,7 +1,9 @@
 package org.light4j.ssojwt.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -19,6 +21,10 @@ import java.util.concurrent.TimeUnit;
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
@@ -26,7 +32,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         clients.inMemory()
                 .withClient("client1")
                 .secret(new BCryptPasswordEncoder().encode("123456"))
-                .authorizedGrantTypes("authorization_code", "refresh_token")
+                // authorization_code 使用授权码模式(Authorization Code grant)保护资源
+                // password 使用密码模式(Resource Owner Password Credentials grant type )
+                // implicit 支持隐式授权模式(Implicit grant)
+                // client_credentials 配置客户端证书授权模式(Client Credentials grant)
+                .authorizedGrantTypes("authorization_code", "password", "implicit","client_credentials", "refresh_token")
                 .scopes("all")
                 .autoApprove(false)
                 .and()
@@ -46,13 +56,14 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         tokenServices.setSupportRefreshToken(true);
         tokenServices.setClientDetailsService(endpoints.getClientDetailsService());
         tokenServices.setTokenEnhancer(endpoints.getTokenEnhancer());
-        tokenServices.setAccessTokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(1)); // 一天有效期
+        tokenServices.setAccessTokenValiditySeconds((int) TimeUnit.MINUTES.toSeconds(1)); // 一天有效期
         endpoints.tokenServices(tokenServices);
+        endpoints.authenticationManager(authenticationManager);// 密码模式需要在OAuth2AuthorizationServer 中配置AuthenticationManager
     }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security.tokenKeyAccess("isAuthenticated()");
+        security.tokenKeyAccess("isAuthenticated()").allowFormAuthenticationForClients();
     }
 
     @Bean

@@ -8,11 +8,12 @@ import org.springframework.stereotype.Component;
 @Component
 public interface UserMapper {
 
-//    @SelectProvider(type = UserProvider.class,method = "getUserById")
-//    @Results({
-//            @Result(property = "username", column = "username"),
-//            @Result(property = "password", column = "password"),
-//    })
-//    User getUserById(@Param("id") long id);
+    @SelectProvider(type = UserProvider.class,method = "getUserById")
+    @Results({
+            @Result(property = "id", column = "id"),
+            @Result(property = "username", column = "username"),
+            @Result(property = "password", column = "password"),
+    })
+    User getUserById(@Param("id") long id);
 
 }

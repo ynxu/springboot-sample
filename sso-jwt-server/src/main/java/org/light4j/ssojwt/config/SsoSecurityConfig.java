@@ -41,7 +41,8 @@ public class SsoSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 //        super.configure(http);
-        http.requestMatchers().antMatchers("/oauth/**","/login/**","/logout/**")
+        http.requestMatchers()
+                .antMatchers("/oauth/**","/login/**","/logout/**")
                 .and()
                 .authorizeRequests()
                 .antMatchers("/oauth/**").authenticated()

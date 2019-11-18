@@ -5,8 +5,9 @@ USE sample;
 -- 安全用户信息表
 CREATE TABLE IF NOT EXISTS user
 (
-    username           VARCHAR(50) primary key NULL,
-    password           VARCHAR(50)             NOT NULL,
+    id                 integer  primary key not null ,
+    username           VARCHAR(50)            not null ,
+    password           VARCHAR(50)            NOT NULL,
     email              varchar(50) comment '用户邮箱',
     activated          tinyint(1),
     activation_key     varchar(50),
@@ -15,41 +16,16 @@ CREATE TABLE IF NOT EXISTS user
     AUTO_INCREMENT = 100001
     DEFAULT CHARSET = utf8;
 
--- 角色安全信息表
-create table if not exists authority
+
+
+create table if not exists t_test_1
 (
-    name varchar(50) not null comment '安全角色信息'
-)
-    DEFAULT CHARSET = utf8;;
--- 用户角色关联表
-create table if not exists user_authority
-(
-    username  varchar(50) not null,
-    authority varchar(50) not null
-)
-    DEFAULT CHARSET = utf8;
-
--- access token 信息表
-create table if not exists access_token
-(
-    token_id          varchar(256) not null,
-    token             blob,
-    authentication_id varchar(256),
-    user_name         varchar(20),
-    client_id         varchar(256),
-    authentication    blob,
-    refresh_token     varchar(256)
-
-)
-    DEFAULT CHARSET = utf8;;
--- refresh token 信息表
-create table if not exists refresh_token
-(
-    token_id       varchar(256) not null,
-    token          blob,
-    authentication bool
-)
-    DEFAULT CHARSET = utf8;
-
-
-
+    `id` integer(32) primary key auto_increment comment '推送消息id',
+    `target_user` varchar(32) not null comment '推送用户id' ,
+    `entry_id` integer(32) not null comment '对应同送内容实体信息id',
+    `entry_type` tinyint(4) not null comment '推送消息类型:1.评论|2.点赞|3.分享|4.邀请',
+    `create_time` timestamp not null default current_timestamp comment '消息创建时间',
+    `update_time` timestamp not null default current_timestamp on update current_timestamp comment '消息查阅时间',
+    `status` tinyint not null default 0 comment '消息查阅状态:0.未查阅|1.已查阅|2.已过期',
+    key `IX_USER_ID` (`target_user`)
+) auto_increment=10000000  engine = InnoDB default charset = utf8 comment '测试表';

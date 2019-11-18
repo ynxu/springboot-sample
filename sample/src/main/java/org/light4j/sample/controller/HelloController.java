@@ -19,12 +19,12 @@ public class HelloController {
 
     @GetMapping(value = "/hello")
     public Response<String> hello() {
-        return new Response<>(RestCode.SUCCESS, "hello");
+        return new Response(RestCode.SUCCESS, "hello");
     }
 
     @GetMapping(value = "/article")
     public Response<ArticleConfig> article() {
-        return new Response<>(RestCode.SUCCESS, configService.getArticle());
+        return new Response(RestCode.SUCCESS, configService.getArticle());
     }
 
 }
